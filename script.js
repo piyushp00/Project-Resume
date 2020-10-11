@@ -1,6 +1,8 @@
-
-
 var navMenuAnchorTags = document.querySelectorAll('.nav-menu a');
+var interval;
+
+
+
 console.log(navMenuAnchorTags);
 
 for (var i = 0; i < navMenuAnchorTags.length; i++) {
@@ -14,10 +16,13 @@ for (var i = 0; i < navMenuAnchorTags.length; i++) {
     var interval = setInterval(function () {
       var targetSectionCoordinates = targetSection.getBoundingClientRect();
       if (targetSectionCoordinates.top <= 0) {
-        clearInterval(interval)
+        clearInterval(interval);
         return;
       }
       window.scrollBy(0, 50);
     }, 15);
   });
 }
+
+
+
